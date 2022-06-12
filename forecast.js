@@ -1,4 +1,4 @@
-// vzQATewT8MJMuRhMCXQyiVh8AE3PSwGu
+
 
 const key = 'vzQATewT8MJMuRhMCXQyiVh8AE3PSwGu';
 
@@ -18,7 +18,6 @@ const getWeather = async (cityId)=>{
 
      const resp2 = await resp1.json();
 
-     // console.log(resp2);   
 
      return resp2[0];
 }
@@ -42,34 +41,9 @@ const getCityId = async (city) => {
      const resp2 = await resp1.json();
 
 
-     return resp2[0];   //returning the first object in the array but still it's a promise
-
+     return resp2[0];   
 
 };
 
 
 
-
-
-// getCityId('manchester').then((data) => {
-
-//      // console.log(data);
-
-//      const cityId = data.Key;
-
-//      return getWeather(cityId);
-
-
-// })
-// .then((WeatherData)=>{
-
-//      console.log(WeatherData);
-
-// })
-// .catch((err) => {
-
-//      window.alert('Error ', err);
-
-//      window.location.reload();
-
-// });
