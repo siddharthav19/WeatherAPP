@@ -1,0 +1,60 @@
+body {
+
+  background: #eeedec;
+
+  letter-spacing: 0.2em;
+
+  font-size: 0.8em;
+}
+
+.container {
+
+  max-width: 400px;
+
+}
+
+body,
+html {
+
+  height: 100%;
+
+  margin: 0;
+
+}
+
+.bg {
+
+  background-image: url("https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwY29vbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+
+  height: 100%;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  
+}
+
+
+.spin--up {
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+
+.hide {
+
+  display: none;
+
+}
+
+.icon{
+  position: relative;
+  top: -50px;
+  width: 100%;
+  margin-bottom: -50px;
+}
