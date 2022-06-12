@@ -12,22 +12,9 @@ const icon = document.querySelector('.iconsimage');
 
 
 const updateUi = (data)=>{
-
-
-     //With Normal local variables 
-
-     /*
-
-      const cityDetails = data.cityDetails;
-
-     const weatherDetails = data.weatherDetails; 
      
-     */
-
-     // with Destructuring Property 
-
-     const { cityDetails , weatherDetails } = data;     //the names inside the {} should be same as of the names of the properties of data object then only we can use destructuring property
-
+     
+     const { cityDetails , weatherDetails } = data;    
 
      spinner.classList.add('hide');
 
@@ -43,7 +30,7 @@ const updateUi = (data)=>{
      </div>
 
      `
-     // we can also do it like data.cityDetails.EnglishName instead of cityDetails.EnglishName
+    
 
      if(weatherDetails.IsDayTime===true)
      {
@@ -79,15 +66,11 @@ const updateCity = async (cityName)=>{
      console.log(cityDetails);
      console.log(weatherDetails);
 
-     // return {
-     //      cityDetails : cityDetails,
-     //      weatherDetails : weatherDetails
-     // };
+  
 
      return { cityDetails, weatherDetails }; 
      
-     // object shorthand notation when the property's look/(name) is same as it's value look/(name);
-
+    
 };
 
 
