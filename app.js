@@ -2,6 +2,7 @@
 //EnglishName == CityName 
 //WeatherText == weather Type
 
+
 const form = document.querySelector('form');
 
 const details = document.querySelector('.details');
@@ -16,9 +17,8 @@ const icon = document.querySelector('.iconsimage');
 
 
 const updateUi = (data)=>{
-     
-     
-     const { cityDetails , weatherDetails } = data;    
+
+     const { cityDetails , weatherDetails } = data;     
 
      spinner.classList.add('hide');
 
@@ -38,17 +38,17 @@ const updateUi = (data)=>{
 
      if(weatherDetails.IsDayTime===true)
      {
-          time.setAttribute('src','day.svg');
+          time.setAttribute('src','img/day.svg');
 
      }
      else{
 
-          time.setAttribute('src','night.svg');
+          time.setAttribute('src','img/night.svg');
      }
 
      let picNumber =data.weatherDetails.WeatherIcon;
 
-     let result = `icons/${picNumber}.svg`;
+     let result = `img/icons/${picNumber}.svg`;
 
      icon.setAttribute('src',result);
 
@@ -67,15 +67,29 @@ const updateCity = async (cityName)=>{
 
      const weatherDetails = await getWeather(cityDetails.Key);
 
-     console.log(cityDetails);
-     console.log(weatherDetails);
-
-  
-
      return { cityDetails, weatherDetails }; 
-     
-    
+
 };
+
+
+if(localStorage.length!==0)
+{
+     let cityName = localStorage.getItem('locationName');
+
+     updateCity(cityName).then((data)=>{
+
+          updateUi(data);
+
+     }).catch((err)=>{
+
+          alert('Error ',err);
+
+          window.location.reload();
+
+      
+     });
+}
+
 
 
 form.addEventListener('submit',(e)=>{
@@ -85,6 +99,10 @@ form.addEventListener('submit',(e)=>{
      spinner.classList.remove('hide');
 
      const city = form.city.value.trim().toLowerCase();
+
+     let sendingData = city.toUpperCase();
+
+     localStorage.setItem('locationName',sendingData);
 
      form.reset();
 
