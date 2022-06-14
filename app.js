@@ -3,6 +3,7 @@
 //WeatherText == weather Type
 
 
+
 const form = document.querySelector('form');
 
 const details = document.querySelector('.details');
