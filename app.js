@@ -38,17 +38,17 @@ const updateUi = (data)=>{
 
      if(weatherDetails.IsDayTime===true)
      {
-          time.setAttribute('src','img/day.svg');
+          time.setAttribute('src','day.svg');
 
      }
      else{
 
-          time.setAttribute('src','img/night.svg');
+          time.setAttribute('src','night.svg');
      }
 
      let picNumber =data.weatherDetails.WeatherIcon;
 
-     let result = `img/icons/${picNumber}.svg`;
+     let result = `icons/${picNumber}.svg`;
 
      icon.setAttribute('src',result);
 
