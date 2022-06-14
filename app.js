@@ -4,6 +4,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const form = document.querySelector('form');
 
 const details = document.querySelector('.details');
