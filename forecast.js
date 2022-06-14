@@ -1,6 +1,6 @@
 
 
-const key = 'TLnv2Qj8TRZF8L14ZZiYYFBtgVSK09gR';
+const key = 'ia64SlIBI1pFeGAKVWa9gy83v0beRnHj';
 
 const getWeather = async (cityId)=>{
 
