@@ -58,6 +58,8 @@ const updateUi = (data)=>{
           card.classList.remove('hide');
 
      }
+     
+     window.scrollTo(0,200);
 
 
 };
