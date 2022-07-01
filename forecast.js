@@ -2,6 +2,7 @@
 
 const key = 'ia64SlIBI1pFeGAKVWa9gy83v0beRnHj';
 
+
 const getWeather = async (cityId)=>{
 
      const baseVal = `https://dataservice.accuweather.com/currentconditions/v1/`;
@@ -20,6 +21,7 @@ const getWeather = async (cityId)=>{
 
 
      return resp2[0];
+     
 }
 
 
